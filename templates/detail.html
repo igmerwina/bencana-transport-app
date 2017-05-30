@@ -13,7 +13,7 @@
     </h1>
     <div id="map" style="width:100%; height:400px;"></div>
     <h3>Koban diperkiranan {{ object.korban }} <br><hr>
-    Kerugian yakni {{ object.kerugian }} <br><hr>
+    Kerugian: {{ object.kerugian }} <br><hr>
     Kronologi: {{ object.keterangan }} <br><hr>
     Upaya Penanggulangan: {{ object.upaya }} </h3>
     <script type="text/javascript">
@@ -23,7 +23,9 @@
         attribution: 'Data dan info peta diperoleh dari <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>.'
       });
       map.addLayer(osmLayer);
-      var marker = L.marker([{{ object.y }}, {{ object.x }}]).addTo(map);
+      var marker = L.marker([{{ object.y }}, {{ object.x }}]).addTo(map)
+        .bindPopup('Lokasi Kejadian')
+        .openPopup().closeButton="";
     </script>
   </body>
 </html>
