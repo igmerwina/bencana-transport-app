@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kecelakaan Lalulintas</title>
+  </head>
+  <body>
+    <h1>Kecelakaan Lalu Lintas</h1>
+    <table border=1 cellpadding=7>
+			<tr>
+				<th>No</th>
+        <th>Tanggal</th>
+        <th>Jam</th>
+        <th>Lokasi</th>
+        <th>Bencana</th>
+			</tr>
+			{% for obj in object_list %}
+			<tr>
+				<td> {{ obj.no }} </td>
+        <td> {{ obj.tanggal }}</td>
+        <td> {{ obj.jam }}</td>
+        <td> {{ obj.lokasi }} </td>
+        <td> {{ obj.bencana }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+  </body>
+</html>
