@@ -2,27 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Kecelakaan Lalulintas</title>
+    <title>Bencana Transport App | igmerwina</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
   </head>
   <body>
     <h1>Kecelakaan Lalu Lintas</h1>
+    <p>by <a href="http://www.igmerwina.id">Made Erwin Ardiantha</a></p>
+    <div id="map" style="width:100%; height:300px;"></div>
+    <br>
     <table border=1 cellpadding=7>
 			<tr>
-				<th>No</th>
+        <th>Bencana</th>
         <th>Tanggal</th>
         <th>Jam</th>
-        <th>Lokasi</th>
-        <th>Bencana</th>
+        <th>Lokasi</th
 			</tr>
 			{% for obj in object_list %}
 			<tr>
-				<td> {{ obj.no }} </td>
+        <td><a href="{{ obj.no }}"> {{ obj.bencana }}</a></td>
         <td> {{ obj.tanggal }}</td>
         <td> {{ obj.jam }}</td>
         <td> {{ obj.lokasi }} </td>
-        <td> {{ obj.bencana }}</td>
 			</tr>
 			{% endfor %}
 		</table>
+    <script type="text/javascript">
+      var map = L.map('map').setView([-2.29, 125], 4);
+      var osmLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: 'Info peta dari <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>.'
+      });
+      map.addLayer(osmLayer);
+    </script>
   </body>
 </html>
