@@ -7,16 +7,16 @@
 		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
   </head>
   <body>
-    <h1>Bencana Tranportasi di Indonesia</h1>
+    <h1><a href="{{ url_for('.index')}}">Bencana Tranportasi di Indonesia </a></h1>
     <h2>
       Informasi kecelakaan transportasi di indonesia
       sejak tahun 2011-2014
     </h2>
-    <h3> Data diperoleh dari <a href="http://data.go.id/dataset/data-kecelakaan-transportasi-2">data.id</a></h3>
+    <h3> Data diperoleh dari <a href="http://data.go.id/dataset/data-kecelakaan-transportasi-2">data.id</a> dengan sedikit perubahan</h3>
     <p>
-      Based on <a href="http://first-news-app.readthedocs.org/">The First News App</a>
+      Based on <a href="{{ url_for('.index')}}">The First News App</a>
           by <a href="https://twitter.com/dancow">Dan Nguyen</a><br>
-      Built with: Flask, Frozen-Flask, Atom, and Infused Water <br>
+      Built with: Flask, Atom, and Infused Water <br>
       by <a href="http://www.igmerwina.id">Made Erwin Ardiantha</a></p>
     <div id="map" style="width:100%; height:400px;"></div>
     <br>
@@ -39,8 +39,8 @@
     <script type="text/javascript">
       var map = L.map('map').setView([-1.1, 120], 5);
       var osmLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-        attribution: 'Data dan info peta diperoleh dari <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>.'
+        maxZoom: 18, minZoom: 5,
+        attribution: 'Data dan info peta diperoleh dari <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>.',
       });
       map.addLayer(osmLayer);
       var data = {

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Bencana Transport App | igmerwina</title>
+    <title>Bencana Transportasi App | igmerwina</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
   </head>
@@ -12,14 +12,14 @@
       <h2>Lokasi: {{ object.lokasi }}</h2>
     </h1>
     <div id="map" style="width:100%; height:400px;"></div>
-    <h3>Koban diperkiranan {{ object.korban }} <br><hr>
+    <h3>Jumlah korban: {{ object.korban }} <br><hr>
     Kerugian: {{ object.kerugian }} <br><hr>
     Kronologi: {{ object.keterangan }} <br><hr>
     Upaya Penanggulangan: {{ object.upaya }} </h3>
     <script type="text/javascript">
-      var map = L.map('map').setView([{{ object.y }}, {{ object.x }}], 8);
+      var map = L.map('map').setView([{{ object.y }}, {{ object.x }}], 11);
       var osmLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 18,
+        maxZoom: 18, minZoom: 10,
         attribution: 'Data dan info peta diperoleh dari <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>.'
       });
       map.addLayer(osmLayer);
