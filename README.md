@@ -1,7 +1,7 @@
 Website Data Bencana Transportasi Indonesia
 ===
 
-Website ini menampilkan data kecelakaan transportasi pada tahun 2011-2014. Data diperoleh dari [data.id](http://data.go.id/dataset/data-kecelakaan-transportasi-2). Tak untuk belajar Python, Flask, git, logika, css, js, html, _dmblyl_.
+Website ini menampilkan data kecelakaan transportasi pada tahun 2011-2014. Data diperoleh dari [data.id](http://data.go.id/dataset/data-kecelakaan-transportasi-2). Tak pakai untuk belajar Python, Flask, git, logika, css, js, html, _dmblyl_.
 
 Thanks To:
 - [First News App Tutorial][5]
@@ -14,6 +14,6 @@ Thanks To:
 [2]: http://www.data.id/
 [3]: http://www.atom.io/
 [4]: https://github.com/jgthms/bulma
-[5]: first-news-app.readthedocs.io/en/latest/
+[5]: https://first-news-app.readthedocs.io/en/latest/
 
-`igmerwina @ 2017` 
+`igmerwina @ 2017`
