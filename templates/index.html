@@ -3,44 +3,98 @@
   <head>
     <meta charset="utf-8">
     <title>Bencana Transportasi App | igmerwina</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 		<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
   </head>
   <body>
-    <h1><a href="{{ url_for('.index')}}">Bencana Tranportasi di Indonesia </a></h1>
-    <h2>
-      Informasi kecelakaan transportasi di indonesia
-      sejak tahun 2011-2014
-    </h2>
-    <h3> Data diperoleh dari <a href="http://data.go.id/dataset/data-kecelakaan-transportasi-2">data.id</a> dengan sedikit perubahan</h3>
-    <p>
-      Based on <a href="{{ url_for('.index')}}">The First News App</a>
-          by <a href="https://twitter.com/dancow">Dan Nguyen</a><br>
-      Built with: Flask, Atom, and Infused Water <br>
-      by <a href="http://www.igmerwina.id">Made Erwin Ardiantha</a></p>
-    <div id="map" style="width:100%; height:400px;"></div>
-    <br>
-    <table border=1 cellpadding=7>
-			<tr>
-        <th>Bencana</th>
-        <th>Lokasi</th>
-        <th>Tanggal</th>
-        <th>Jam</th>
-			</tr>
-			{% for obj in object_list %}
-			<tr>
-        <td> {{ obj.bencana }}</td>
-        <td> <a href="{{ obj.no }}"> {{ obj.lokasi }} </a></td>
-        <td> {{ obj.tanggal }}</td>
-        <td> {{ obj.jam }}</td>
-			</tr>
-			{% endfor %}
-		</table>
+
+    <!-- nav header -->
+    <nav class="nav has-shadow">
+      <div class="container">
+        <div class="nav-left">
+          <a class="nav-item" href="{{ url_for('.index')}}">
+            <b>Data Bencana Transportasi Indonesia</b>
+          </a>
+        </div>
+        <div class="nav-right nav-menu">
+          <a class="nav-item is-tab">versi: 1.0</a>
+        </div>
+      </div>
+    </nav> <!-- end nav header -->
+
+    <div class="container">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            <a href="{{ url_for('.index')}}">Data Bencana Tranportasi di Indonesia</a>
+          </h1>
+          <h2 class="subtitle">
+              Informasi kecelakaan transportasi di indonesia sejak tahun 2011-2014
+              <br>Sumber: <a target="_blank" href="http://data.go.id/dataset/data-kecelakaan-transportasi-2">data.id</a> dengan sedikit perubahan
+          </h2>
+        </div>
+      </div>
+
+        <div id="map" style="width:100%; height:400px;"></div>
+
+        <br>
+        <table class="table is-striped">
+    			<tr>
+            <th>Bencana</th>
+            <th>Lokasi</th>
+            <th width="10%">Tanggal</th>
+    			</tr>
+    			{% for obj in object_list %}
+    			<tr>
+            <td> {{ obj.bencana }}</td>
+            <td> <a href="{{ obj.no }}"> {{ obj.lokasi }} </a></td>
+            <td> {{ obj.tanggal }}</td>
+    			</tr>
+    			{% endfor %}
+    		</table>
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+            <p>
+              <a href="{{ url_for('.index')}}">
+                <strong>Data Bencana Transportasi Indonesia </strong>
+              </a> by <a href="http://igmerwina.id" target="_blank">Made Erwin Ardiantha</a>
+              <br>Based on <a href="http://first-news-app.readthedocs.io/en/latest/" target="_blank">The First News App</a>
+                  from <a href="https://twitter.com/dancow" target="_blank">Dan Nguyen</a><br>
+            </p>
+            Source code berlisensi:
+            <a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a><br>
+          <p>
+            <a class="icon" href="https://github.com/igmerwina/" target="_blank">
+              <i class="fa fa-github"></i>
+            </a>
+            <a class="icon" href="http://www.pocoo.org/" target="_blank">
+              <i class="fa fa-flask"></i>
+            </a>
+            <a class="icon" href="http://www.data.id/" target="_blank">
+              <i class="fa fa-database"></i>
+            </a>
+            <a class="icon" href="http://www.atom.io/" target="_blank">
+              <i class="fa fa-pencil-square-o"></i>
+            </a>
+            <a class="icon" href="https://github.com/jgthms/bulma" target="_blank">
+              <i class="fa fa-css3"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <script type="text/javascript">
-      var map = L.map('map').setView([-1.1, 120], 5);
+      var map = L.map('map').setView([-1.1, 117], 5);
       var osmLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18, minZoom: 5,
-        attribution: 'Data dan info peta diperoleh dari <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>.',
+        attribution: 'Sumber Data dan info peta: <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>.',
       });
       map.addLayer(osmLayer);
       var data = {
