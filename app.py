@@ -17,7 +17,7 @@ def get_csv():
     csv_list = list(csv_obj)
     return csv_list
 
-@app.route("/")
+@app.route('/')
 def index():
     template = 'index.html'
     object_list = get_csv()
