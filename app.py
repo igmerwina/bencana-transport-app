@@ -9,6 +9,7 @@ from flask import Flask
 from flask import abort
 from flask import render_template
 app = Flask(__name__)
+app.config['PROPAGATE_EXCEPTIONS'] = True
 
 def get_csv():
     csv_path = './static/data-bencana-kecelakaan-transportasi-2011-2014.csv'
@@ -33,4 +34,4 @@ def detail(row_id):
     abort(404)
 
 if __name__ == '__main__':
-    app.run(PROPAGATE_EXCEPTIONS=True)
+    app.run()
