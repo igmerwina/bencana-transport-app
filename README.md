@@ -5,7 +5,9 @@ Website Data Bencana Transportasi Indonesia
 
 ---
 
-Website ini menampilkan data kecelakaan transportasi pada tahun 2011-2014. Data diperoleh dari [data.id](http://data.go.id/dataset/data-kecelakaan-transportasi-2). Tak pakai untuk belajar Python, Flask, git, logika, css, js, html, _dmblyl_.
+Website ini menampilkan data kecelakaan transportasi pada tahun 2011-2014.
+
+Data diperoleh dari [data.id](http://data.go.id/dataset/data-kecelakaan-transportasi-2). Tak pakai untuk belajar Python, Flask, git, logika, css, js, html, _dmblyl_.
 
 ---
 Thanks To:
@@ -25,13 +27,18 @@ Thanks To:
 
 Cara install:
 1. Pastikan sudah install python
-2. Melalui cmd, masuk ke folder, jalankan: ```python
-python app.py
-```
-3. Selamat menikmati
+2. Melalui cmd masuk ke folder, lalu ketik: `python app.py`
+3. Cek di browser `http://localhost:5000`
+4. Jos gandos asolole
+
+---
+
+*Masih dalam tahap pengembangan lebih lanjut*
 
 ---
 
 Lisensi: MIT
+
+---
 
 `igmerwina @ 2017`
