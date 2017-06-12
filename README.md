@@ -5,8 +5,9 @@ Website Data Bencana Transportasi Indonesia
 
 ---
 
-#### Website ini menampilkan data kecelakaan transportasi pada tahun 2011-2014.
-Data diperoleh dari [data.id](http://data.go.id/dataset/data-kecelakaan-transportasi-2). Web ini saya pakai buat belajar Python, Flask, git, logic, css, js, html, _dmblyl_.
+- Website ini menampilkan data kecelakaan transportasi pada tahun 2011-2014.
+- Data diperoleh dari [data.id](http://data.go.id/dataset/data-kecelakaan-transportasi-2).
+- Aplikasi web ini saya pakai buat belajar Python, Flask, git, logic, css, js, html, _dmblyl_.
 
 ---
 ### Thanks To:
