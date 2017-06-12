@@ -26,7 +26,7 @@ Data diperoleh dari [data.id](http://data.go.id/dataset/data-kecelakaan-transpor
 
 ### Cara install:
 1. Pastikan sudah install python
-2. Melalui cmd masuk ke folder, lalu ketik: `python app.py`
+2. Melalui cmd masuk ke folder, lalu ketik: ``` python python app.py ```
 3. Cek di browser `http://localhost:5000`
 4. Jos gandos asolole
 
