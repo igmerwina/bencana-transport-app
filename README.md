@@ -16,7 +16,7 @@ Data diperoleh dari [data.id](http://data.go.id/dataset/data-kecelakaan-transpor
 - [Atom.io][3]
 - [Bulma css][4]
 
-[1]: http://www.pocoo.org/
+[1]: http://flask.pocoo.org/
 [2]: http://www.data.id/
 [3]: http://www.atom.io/
 [4]: https://github.com/jgthms/bulma
