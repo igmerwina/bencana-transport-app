@@ -32,7 +32,7 @@ Data diperoleh dari [data.id](http://data.go.id/dataset/data-kecelakaan-transpor
 
 ### **Lisensi: MIT**
 
-#### *Masih dalam tahap belajar untuk pengembangan*
+##### Masih dalam tahap belajar untuk pengembangan
 
 ---
 
