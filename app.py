@@ -1,5 +1,5 @@
 '''
-    Web sederhana pemetaan kecelakaan aja
+    Web sederhana pemetaan kecelakaan
     mirip first news app
 '''
 # app.py >> konfigurasi untuk server & route ada di sini
@@ -13,7 +13,7 @@ app.config['PROPAGATE_EXCEPTIONS'] = True
 
 def get_csv():
     csv_path = './static/data-bencana-kecelakaan-transportasi-2011-2014.csv'
-    csv_file = open(csv_path, 'r')
+    csv_file = open(csv_path, 'r', encoding='unicode_escape')
     csv_obj  = csv.DictReader(csv_file)
     csv_list = list(csv_obj)
     return csv_list
@@ -34,4 +34,4 @@ def detail(row_id):
     abort(404)
 
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
+    app.run(debug=True, use_reloader=True, host='0.0.0.0')

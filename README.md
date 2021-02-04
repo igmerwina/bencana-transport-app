@@ -1,13 +1,14 @@
-Website Data Bencana Transportasi Indonesia
+Website Data Bencana Transportasi Indo 2011 - 2014
 ===
 
-![alt text](https://github.com/igmerwina/bencana-transport-app/blob/master/static/capture.png "Screenshot")
+![Skrinsut](/static/capture.png)
 
 ---
 
 - Website ini menampilkan data kecelakaan transportasi pada tahun 2011-2014.
 - Data diperoleh dari [data.id](http://data.go.id/dataset/data-kecelakaan-transportasi-2).
 - Aplikasi web ini saya pakai buat belajar Python, Flask, git, logic, css, js, html, _dmblyl_.
+- Dibuat untuk belajar `python`, `flask`, dan kombinasi `csv data`
 
 ---
 ### Thanks To:
@@ -17,24 +18,22 @@ Website Data Bencana Transportasi Indonesia
 - [Atom.io][3]
 - [Bulma css][4]
 
-[1]: http://flask.pocoo.org/
+[1]: https://flask.palletsprojects.com/en/1.1.x/
 [2]: http://www.data.id/
-[3]: http://www.atom.io/
+[3]: https://code.visualstudio.com/
 [4]: https://github.com/jgthms/bulma
 [5]: https://first-news-app.readthedocs.io/en/latest/
 
 ---
 
 ### Cara install:
-1. Pastikan sudah install python
-2. Melalui cmd masuk ke folder, lalu ketik: ``` python app.py ```
-3. Cek di browser `http://localhost:5000`
-4. Jos gandos asolole
+1. Pastikan sudah install python 3.5+
+2. Install requirements dengan `pipenv` menggunakan `pipenv install`
+2. Melalui cmd masuk ke folder, lalu ketik: ```python app.py ```
+3. Buka brower cek url: `http://localhost:5000`
 
 ### **Lisensi: MIT**
 
-##### Masih dalam tahap belajar untuk pengembangan
-
 ---
 
-`igmerwina @ 2017`
+`igmerwina @ 2017 - 2021`
